@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.julong.oasystem.dao.PaperDao">
+
+    <select id="queryPaper" resultType="com.julong.oasystem.entity.PaperVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            title as "title",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as "status",
+            TO_CHAR(start_time,'yyyy-mm-dd hh24:mi:ss') as "startTime",
+            TO_CHAR(end_time,'yyyy-mm-dd hh24:mi:ss') as "endTime"
+        FROM oa_paper
+         WHERE
+        status in (0,1,2)
+        ORDER BY id DESC
+    </select>
+
+    <select id="queryPaperWithStatus1" resultType="com.julong.oasystem.entity.PaperVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            title as "title",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as "status",
+            TO_CHAR(start_time,'yyyy-mm-dd hh24:mi:ss') as "startTime",
+            TO_CHAR(end_time,'yyyy-mm-dd hh24:mi:ss') as "endTime"
+        FROM oa_paper
+         WHERE status = 1
+    </select>
+
+    <select id="queryPaperByUserID" resultType="com.julong.oasystem.entity.PaperVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            title as "title",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as "status",
+            TO_CHAR(start_time,'yyyy-mm-dd hh24:mi:ss') as "startTime",
+            TO_CHAR(end_time,'yyyy-mm-dd hh24:mi:ss') as "endTime"
+        FROM oa_paper
+        WHERE
+        user_id=#{userId} AND status in (0,1,2)
+    </select>
+
+    <select id="queryPaperByID" resultType="com.julong.oasystem.entity.PaperVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            title as "title",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as "status",
+            TO_CHAR(start_time,'yyyy-mm-dd hh24:mi:ss') as "startTime",
+            TO_CHAR(end_time,'yyyy-mm-dd hh24:mi:ss') as "endTime"
+        FROM oa_paper
+        WHERE
+        id=#{id}
+    </select>
+
+    <insert id="insertPaper" keyProperty="id" keyColumn="id"
+            parameterType="com.julong.oasystem.entity.PaperVO">
+        INSERT INTO oa_paper
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="startTime != null">
+                start_time,
+            </if>
+            <if test="endTime != null">
+                end_time,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=DATE},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                #{startTime,jdbcType=DATE},
+            </if>
+            <if test="endTime != null">
+                #{endTime,jdbcType=DATE},
+            </if>
+        </trim>
+
+    </insert>
+
+    <update id="updatePaper" parameterType="com.julong.oasystem.entity.PaperVO">
+        UPDATE oa_paper
+        <set>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="title != null">title = #{title},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="startTime != null">start_time = #{startTime},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="endTime != null">end_time = #{endTime}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deletePaper">
+        DELETE FROM
+        oa_paper
+        WHERE id = #{id}
+    </delete>
+
+    <select id="queryPaperByTitle" resultType="com.julong.oasystem.entity.PaperVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            title as "title",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as "status",
+            TO_CHAR(start_time,'yyyy-mm-dd hh24:mi:ss') as "startTime",
+            TO_CHAR(end_time,'yyyy-mm-dd hh24:mi:ss') as "endTime"
+        FROM oa_paper
+        WHERE
+        title LIKE "%"#{title}"%" AND status in (0,1,2)
+    </select>
+
+</mapper>

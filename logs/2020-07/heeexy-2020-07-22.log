@@ -1,0 +1,32 @@
+2020-07-22 10:31:55.361 INFO  --- [SpringApplication.java:651][main] - No active profile set, falling back to default profiles: default
+2020-07-22 10:32:23.453 WARN  --- [URLConfigurationSource.java:121][main] - No URLs will be polled as dynamic configuration sources.
+2020-07-22 10:32:23.454 INFO  --- [URLConfigurationSource.java:122][main] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-22 10:32:23.468 WARN  --- [URLConfigurationSource.java:121][main] - No URLs will be polled as dynamic configuration sources.
+2020-07-22 10:32:23.469 INFO  --- [URLConfigurationSource.java:122][main] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-22 10:32:29.021 INFO  --- [StartupInfoLogger.java:61][main] - Started OasystemApplicationTests in 41.406 seconds (JVM running for 44.527)
+2020-07-22 10:42:40.019 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-07-22 10:42:44.967 WARN  --- [URLConfigurationSource.java:121][restartedMain] - No URLs will be polled as dynamic configuration sources.
+2020-07-22 10:42:44.967 INFO  --- [URLConfigurationSource.java:122][restartedMain] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-22 10:42:44.971 WARN  --- [URLConfigurationSource.java:121][restartedMain] - No URLs will be polled as dynamic configuration sources.
+2020-07-22 10:42:44.972 INFO  --- [URLConfigurationSource.java:122][restartedMain] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-22 10:42:46.615 INFO  --- [DiscoveryClient.java:365][restartedMain] - Initializing Eureka in region us-east-1
+2020-07-22 10:42:46.704 INFO  --- [DiscoveryJerseyProvider.java:70][restartedMain] - Using JSON encoding codec LegacyJacksonJson
+2020-07-22 10:42:46.704 INFO  --- [DiscoveryJerseyProvider.java:71][restartedMain] - Using JSON decoding codec LegacyJacksonJson
+2020-07-22 10:42:46.816 INFO  --- [DiscoveryJerseyProvider.java:80][restartedMain] - Using XML encoding codec XStreamXml
+2020-07-22 10:42:46.816 INFO  --- [DiscoveryJerseyProvider.java:81][restartedMain] - Using XML decoding codec XStreamXml
+2020-07-22 10:42:47.055 INFO  --- [ConfigClusterResolver.java:43][restartedMain] - Resolving eureka endpoints via configuration
+2020-07-22 10:42:47.341 INFO  --- [DiscoveryClient.java:976][restartedMain] - Disable delta property : false
+2020-07-22 10:42:47.342 INFO  --- [DiscoveryClient.java:977][restartedMain] - Single vip registry refresh property : null
+2020-07-22 10:42:47.342 INFO  --- [DiscoveryClient.java:978][restartedMain] - Force full registry fetch : false
+2020-07-22 10:42:47.343 INFO  --- [DiscoveryClient.java:979][restartedMain] - Application is null : false
+2020-07-22 10:42:47.343 INFO  --- [DiscoveryClient.java:980][restartedMain] - Registered Applications size is zero : true
+2020-07-22 10:42:47.344 INFO  --- [DiscoveryClient.java:982][restartedMain] - Application version is -1: true
+2020-07-22 10:42:47.344 INFO  --- [DiscoveryClient.java:1065][restartedMain] - Getting all instance registry info from the eureka server
+2020-07-22 10:42:47.519 INFO  --- [DiscoveryClient.java:1074][restartedMain] - The response status is 200
+2020-07-22 10:42:47.522 INFO  --- [DiscoveryClient.java:1288][restartedMain] - Starting heartbeat executor: renew interval is: 30
+2020-07-22 10:42:47.524 INFO  --- [InstanceInfoReplicator.java:60][restartedMain] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-22 10:42:47.529 INFO  --- [DiscoveryClient.java:465][restartedMain] - Discovery Client initialized at timestamp 1595385767527 with initial instances count: 2
+2020-07-22 10:42:47.541 INFO  --- [DiscoveryClient.java:1323][restartedMain] - Saw local status change event StatusChangeEvent [timestamp=1595385767541, current=UP, previous=STARTING]
+2020-07-22 10:42:47.543 INFO  --- [DiscoveryClient.java:844][DiscoveryClient-InstanceInfoReplicator-0] - DiscoveryClient_HOUTAIGUANLI/192.168.0.103:houtaiguanli:9090: registering service...
+2020-07-22 10:42:47.597 INFO  --- [DiscoveryClient.java:853][DiscoveryClient-InstanceInfoReplicator-0] - DiscoveryClient_HOUTAIGUANLI/192.168.0.103:houtaiguanli:9090 - registration status: 204
+2020-07-22 10:42:47.613 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 10.444 seconds (JVM running for 12.848)

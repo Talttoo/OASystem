@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.julong.oasystem.dao.WageItemDao">
+
+    <select id="queryWageItem" resultType="com.julong.oasystem.entity.wage.WageItemVO">
+        SELECT
+        id as "id",
+        wage_id as "wageId",
+        wage_employee as "wageEmployee",
+        wage_employee_dept as "wageEmployeeDept",
+        wage_details as "wageDetails",
+         create_time as "createTime"
+        FROM OA_WAGE_ITEM
+        ORDER BY create_time ASC
+    </select>
+
+    <select id="queryWageItemByWageId" resultType="com.julong.oasystem.entity.wage.WageItemVO">
+        SELECT
+         id as "id",
+         wage_id as "wageId",
+         wage_employee as "wageEmployee",
+         wage_employee_dept as "wageEmployeeDept",
+         wage_details as "wageDetails",
+         create_time as "createTime"
+
+        FROM OA_WAGE_ITEM
+        WHERE
+        wage_id=#{wageId}
+        ORDER BY id ASC
+    </select>
+
+    <select id="queryWageItemById" resultType="com.julong.oasystem.entity.wage.WageItemVO">
+        SELECT
+        id as "id",
+        wage_id as "wageId",
+        wage_employee as "wageEmployee",
+        wage_employee_dept as "wageEmployeeDept",
+        wage_details as "wageDetails",
+         create_time as "createTime"
+        FROM OA_WAGE_ITEM
+        WHERE
+        id=#{id}
+    </select>
+
+    <select id="queryWageItemByUser" resultType="com.julong.oasystem.entity.wage.WageItemVO">
+        SELECT
+        w.id as "id",
+        w.wage_id as "wageId",
+        w.wage_employee as "wageEmployee",
+        w.wage_employee_dept as "wageEmployeeDept",
+        w.wage_details as "wageDetails",
+        w.create_time as "createTime"
+        FROM OA_WAGE_ITEM w, OA_USER u, OA_DEPT d
+        WHERE
+        w.wage_employee = #{username}
+        AND u.id = #{userId}
+        AND d.deptcode = u.deptcode
+        AND d.deptname =  w.wage_employee_dept
+        ORDER BY w.create_time ASC
+    </select>
+
+    <select id="queryWageItemBywageIdAndUser" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.julong.oasystem.entity.wage.WageItemVO">
+        SELECT
+        w.id as "id",
+        w.wage_id as "wageId",
+        w.wage_employee as "wageEmployee",
+        w.wage_employee_dept as "wageEmployeeDept",
+        w.wage_details as "wageDetails",
+        w.create_time as "createTime"
+        FROM OA_WAGE_ITEM w, OA_USER u, OA_DEPT d
+        WHERE
+        w.wage_id = #{wageid}
+        AND w.wage_employee = #{username}
+        AND u.id = #{userid}
+        AND d.deptcode = u.deptcode
+        AND d.deptname =  w.wage_employee_dept
+        ORDER BY w.create_time ASC
+    </select>
+
+    <insert id="insertWageItem" keyProperty="id" keyColumn="id"
+            parameterType="com.julong.oasystem.entity.wage.WageItemVO">
+
+        INSERT INTO OA_WAGE_ITEM
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="wageId != null">
+                wage_id,
+            </if>
+            <if test="wageEmployee != null">
+                wage_employee,
+            </if>
+            <if test="wageEmployeeDept != null">
+                wage_employee_dept,
+            </if>
+            <if test="wageDetails != null">
+                wage_details,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="wageId != null">
+                #{wageId,jdbcType=VARCHAR},
+            </if>
+            <if test="wageEmployee != null">
+                #{wageEmployee,jdbcType=VARCHAR},
+            </if>
+            <if test="wageEmployeeDept != null">
+                #{wageEmployeeDept,jdbcType=VARCHAR},
+            </if>
+            <if test="wageDetails != null">
+                #{wageDetails,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=DATE},
+            </if>
+
+        </trim>
+
+    </insert>
+
+    <update id="updateWageItem" parameterType="com.julong.oasystem.entity.wage.WageItemVO">
+        UPDATE OA_WAGE_ITEM
+        <set>
+            <if test="wageId != null">wage_id = #{wageId},</if>
+            <if test="wageEmployee != null">wage_employee = #{wageEmployee},</if>
+            <if test="wageEmployeeDept != null">wage_employee_dept = #{wageEmployeeDept},</if>
+            <if test="wageDetails != null">wage_details = #{wageDetails},</if>
+            <if test="createTime != null">create_time = #{createTime}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteWageItem">
+        DELETE FROM
+        OA_WAGE_ITEM
+        WHERE id = #{id}
+    </delete>
+
+    <delete id="deleteWageItemsByWageId">
+        DELETE FROM
+        OA_WAGE_ITEM
+        WHERE wage_id = #{wageId}
+    </delete>
+
+
+    <select id="getWageItemsByWageIdAndWageItemType" resultType="com.julong.oasystem.entity.wage.WageItemVO">
+        SELECT
+            id as "id",
+            wage_id as "wageId",
+            wage_employee as "wageEmployee",
+            wage_employee_dept as "wageEmployeeDept",
+            wage_details as "wageDetails",
+            create_time as "createTime"
+        FROM OA_WAGE_ITEM
+        WHERE
+        wage_id = #{id} AND wage_employee = #{wageEmployee}
+         ORDER BY create_time ASC
+    </select>
+
+</mapper>

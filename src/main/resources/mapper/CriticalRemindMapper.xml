@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.julong.oasystem.dao.CriticalRemindDao">
+
+    <!--危急值提醒-->
+<!--    select *-->
+<!--    from AS_CRITICAL_REMIND-->
+<!--    where-->
+<!--    REQ_DATE = #{date}-->
+<!--    and REP_DATE = #{date}-->
+<!--    and AS_CRITICAL_REMIND.READ_FLAG = 'F'-->
+
+    <select id="getList" resultType="com.alibaba.fastjson.JSONObject" >
+
+                SELECT
+                cr.REP_NO as "repNo" ,
+                cr.REQ_NO as "reqNo" ,
+                re.NAME as  "name" ,
+                re.PID as  "pid" ,
+                cr.SEX as  "sex" ,
+                cr.DEPT_CODE as "deptCode" ,
+                de.DEPT_NAME as  "deptName" ,
+                cr.OPER_NO as  "operNo" ,
+                cr.ROOM_CODE as  "roomCode" ,
+                cr.REQ_DR as  "reqDr" ,
+                op.OPER_NAME as  "operName" ,
+                cr.REQ_DATE as  "reqDate" ,
+                cr.REP_DATE as "repDate" ,
+                cr.READER as "reader" ,
+                cr.GROUP_CODE as "groupCode" ,
+                cr.READ_FLAG as "readFlag" ,
+                cr.CRITICAL_NOTE as "criticalNote",
+                we.USERID as "doctorid",
+                we.MAIN_DEPARTMENT as "deptid"
+            FROM
+                AS_CRITICAL_REMIND cr,
+                AS_REPORT re,
+                CODE_DEPARTMENT de,
+                CODE_OPERATOR op,
+                OA_WECHAT_USER we,
+                OA_DEPT oa_de
+            WHERE
+             cr.REP_NO = re.REP_NO
+            AND cr.DEPT_CODE = de.DEPT_CODE
+            AND cr.REQ_DR = op.OPER_CODE
+            AND we.NAME = op.OPER_NAME
+            AND we.MAIN_DEPARTMENT = oa_de.ID
+            AND  de.DEPT_NAME= oa_de.DEPTNAME
+
+    </select>
+
+    <select id="getNewInsert" resultType="com.alibaba.fastjson.JSONObject" parameterType="string">
+
+                SELECT
+                cr.REP_NO as "repNo" ,
+                cr.REQ_NO as "reqNo" ,
+                re.NAME as  "name" ,
+                re.PID as  "pid" ,
+                cr.SEX as  "sex" ,
+                cr.DEPT_CODE as "deptCode" ,
+                de.DEPT_NAME as  "deptName" ,
+                cr.OPER_NO as  "operNo" ,
+                cr.ROOM_CODE as  "roomCode" ,
+                cr.REQ_DR as  "reqDr" ,
+                op.OPER_NAME as  "operName" ,
+                cr.REQ_DATE as  "reqDate" ,
+                cr.REP_DATE as "repDate" ,
+                cr.INSERT_TIMES as "inTimes" ,
+                cr.READER as "reader" ,
+                cr.GROUP_CODE as "groupCode" ,
+                cr.READ_FLAG as "readFlag" ,
+                cr.CRITICAL_NOTE as "criticalNote",
+                we.USERID as "doctorid",
+                we.MAIN_DEPARTMENT as "deptid"
+            FROM
+                AS_CRITICAL_REMIND cr,
+                AS_REPORT re,
+                CODE_DEPARTMENT de,
+                CODE_OPERATOR op,
+                OA_WECHAT_USER we,
+                OA_DEPT oa_de
+            WHERE
+
+            cr.INSERT_TIMES>= to_date(#{times},'yyyy-MM-dd HH24:mi:ss')
+            AND cr.SEND_FLAG = 'F'
+            AND cr.REP_NO = re.REP_NO
+            AND cr.DEPT_CODE = de.DEPT_CODE
+            AND cr.REQ_DR = op.OPER_CODE
+            AND we.NAME = op.OPER_NAME
+            AND we.MAIN_DEPARTMENT = oa_de.ID
+            AND  de.DEPT_NAME= oa_de.DEPTNAME
+
+    </select>
+
+
+    <update id="updateSend" parameterType="string">
+        UPDATE AS_CRITICAL_REMIND
+        set SEND_FLAG = 'T'
+        where REP_NO = #{repNo,jdbcType=VARCHAR}
+    </update>
+
+
+
+    <select id="getListByRepNo" resultType="com.julong.oasystem.entity.CriticalRemindVO" parameterType="string">
+
+                SELECT
+                cr.REP_NO as "repNo" ,
+                cr.REQ_NO as "reqNo" ,
+                re.NAME as  "name" ,
+                re.PID as  "pid" ,
+                cr.SEX as  "sex" ,
+                cr.DEPT_CODE as "deptCode"  ,
+                de.DEPT_NAME as  "deptName" ,
+                cr.OPER_NO as  "operNo" ,
+                cr.ROOM_CODE as  "roomCode" ,
+                cr.REQ_DR as  "reqDr" ,
+                op.OPER_NAME as  "operName" ,
+                cr.REQ_DATE as  "reqDate" ,
+                cr.REP_DATE as "repDate" ,
+                cr.READER as "reader" ,
+                cr.GROUP_CODE as "groupCode" ,
+                cr.READ_FLAG as "readFlag" ,
+                cr.CRITICAL_NOTE as "criticalNote"
+
+            FROM
+                AS_CRITICAL_REMIND cr,
+                AS_REPORT re,
+                CODE_DEPARTMENT de,
+                CODE_OPERATOR op
+            WHERE
+              cr.REP_NO =#{repNo}
+            AND cr.REP_NO = re.REP_NO
+            AND cr.DEPT_CODE = de.DEPT_CODE
+            AND cr.REQ_DR = op.OPER_CODE
+
+    </select>
+
+    <select id="getListByDate" resultType="com.julong.oasystem.entity.CriticalRemindVO" parameterType="string">
+
+                SELECT
+                cr.REP_NO as "repNo" ,
+                cr.REQ_NO as "reqNo" ,
+                re.NAME as  "name" ,
+                re.PID as  "pid" ,
+                cr.SEX as  "sex" ,
+                cr.DEPT_CODE as "deptCode"  ,
+                de.DEPT_NAME as  "deptName" ,
+                cr.OPER_NO as  "operNo" ,
+                cr.ROOM_CODE as  "roomCode" ,
+                cr.REQ_DR as  "reqDr" ,
+                op.OPER_NAME as  "operName" ,
+                cr.REQ_DATE as  "reqDate" ,
+                cr.REP_DATE as "repDate" ,
+                cr.READER as "reader" ,
+                cr.GROUP_CODE as "groupCode" ,
+                cr.READ_FLAG as "readFlag" ,
+                cr.CRITICAL_NOTE as "criticalNote"
+
+            FROM
+                AS_CRITICAL_REMIND cr,
+                AS_REPORT re,
+                CODE_DEPARTMENT de,
+                CODE_OPERATOR op
+            WHERE
+
+             cr.REQ_DATE=#{date}
+              cr.READ_FLAG = 'F'
+            AND cr.REP_NO = re.REP_NO
+            AND cr.DEPT_CODE = de.DEPT_CODE
+            AND cr.REQ_DR = op.OPER_CODE
+
+    </select>
+
+    <select id="getNotRead" resultType="com.julong.oasystem.entity.CriticalRemindVO" >
+
+                SELECT
+                cr.REP_NO as "repNo" ,
+                cr.REQ_NO as "reqNo" ,
+                re.NAME as  "name" ,
+                re.PID as  "pid" ,
+                cr.SEX as  "sex" ,
+                cr.DEPT_CODE as "deptCode"  ,
+                de.DEPT_NAME as  "deptName" ,
+                cr.OPER_NO as  "operNo" ,
+                cr.ROOM_CODE as  "roomCode" ,
+                cr.REQ_DR as  "reqDr" ,
+                op.OPER_NAME as  "operName" ,
+                cr.REQ_DATE as  "reqDate" ,
+                cr.REP_DATE as "repDate" ,
+                cr.READER as "reader" ,
+                cr.GROUP_CODE as "groupCode" ,
+                cr.READ_FLAG as "readFlag" ,
+                cr.CRITICAL_NOTE as "criticalNote"
+
+            FROM
+                AS_CRITICAL_REMIND cr,
+                AS_REPORT re,
+                CODE_DEPARTMENT de,
+                CODE_OPERATOR op
+            WHERE
+
+              cr.READ_FLAG = 'F'
+            AND cr.REP_NO = re.REP_NO
+            AND cr.DEPT_CODE = de.DEPT_CODE
+            AND cr.REQ_DR = op.OPER_CODE
+
+    </select>
+
+
+
+    <insert id="insertRemindMessage" parameterType="com.alibaba.fastjson.JSONObject">
+
+        <selectKey  keyProperty="id" resultType="int" order="BEFORE">
+            select nvl(max(id),0)+1 from oa_reminds_message
+        </selectKey>
+
+
+        INSERT INTO oa_reminds_message
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null and id != ''" >
+                id,
+            </if>
+            <if test="touser != null and touser != ''" >
+                touser,
+            </if>
+            <if test="username != null and username != ''" >
+                username,
+            </if>
+            <if test="deptname != null and deptname != ''" >
+                deptname,
+            </if>
+            <if test="toparty != null and toparty != ''" >
+                toparty,
+            </if>
+
+            <if test="sender !=null and sender != ''">
+                sender,
+            </if>
+
+            <if test="totag !=null and totag != ''">
+                totag,
+            </if>
+            <if test="msgtype != null and msgtype != ''" >
+                msgtype,
+            </if>
+            <if test="agentid != null  and agentid != ''" >
+                agentid,
+            </if>
+            <if test="content != null  and content != ''" >
+                content,
+            </if>
+            <if test="safe != null  and safe != ''" >
+                safe,
+            </if>
+            <if test="enable_id_trans != null  and enable_id_trans != ''" >
+                enable_id_trans,
+            </if>
+            <if test="enable_duplicate_check != null  and enable_duplicate_check != ''" >
+                enable_duplicate_check,
+            </if>
+            <if test="duplicate_check_interval != null and duplicate_check_interval != ''" >
+                duplicate_check_interval,
+            </if>
+            <if test="create_time != null and create_time != ''" >
+                create_time,
+            </if>
+
+            <if test="status != null and status != ''" >
+                status,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null and id != ''" >
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="touser != null and touser != ''" >
+                #{touser,jdbcType=VARCHAR},
+            </if>
+
+            <if test="username != null and username != ''" >
+                #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="deptname != null and deptname != ''" >
+                #{deptname,jdbcType=VARCHAR},
+            </if>
+
+            <if test="sender != null and sender != ''" >
+                #{sender,jdbcType=VARCHAR},
+            </if>
+
+            <if test="toparty != null and toparty != ''" >
+                #{toparty,jdbcType=VARCHAR},
+            </if>
+
+            <if test="totag !=null and totag != ''">
+                #{totag,jdbcType=VARCHAR},
+            </if>
+            <if test="msgtype != null and msgtype != ''" >
+                #{msgtype,jdbcType=VARCHAR},
+            </if>
+            <if test="agentid != null and agentid != ''" >
+                #{agentid,jdbcType=VARCHAR},
+            </if>
+
+            <if test="content != null and content != ''" >
+                #{content},
+            </if>
+
+            <if test="safe != null and safe != ''" >
+                #{safe,jdbcType=VARCHAR},
+            </if>
+            <if test="enable_id_trans !=null and enable_id_trans != ''">
+                #{enable_id_trans,jdbcType=VARCHAR},
+            </if>
+            <if test="enable_duplicate_check != null and enable_duplicate_check != ''" >
+                #{enable_duplicate_check,jdbcType=VARCHAR},
+            </if>
+            <if test="duplicate_check_interval != null and duplicate_check_interval != ''" >
+                #{duplicate_check_interval,jdbcType=VARCHAR},
+            </if>
+            <if test="create_time != null and create_time != ''" >
+                #{create_time},
+            </if>
+            <if test="status != null and status != ''" >
+                #{status},
+            </if>
+        </trim>
+
+
+    </insert>
+
+
+    <select id="getMessageList" resultType="com.julong.oasystem.entity.CriticalMessageVO" >
+
+                SELECT
+                msg.ID as "id" ,
+                msg.TOUSER as "touser" ,
+                msg.username as "username"  ,
+                msg.deptname as "deptname"  ,
+                msg.sender as "sender" ,
+                us.NICKNAME as "sendername",
+                msg.TOPARTY as "toparty" ,
+                msg.CONTENT as  "content" ,
+                msg.CREATE_TIME as  "create_time" ,
+                msg.STATUS as  "status"
+            FROM
+                oa_reminds_message msg,
+                oa_user us
+
+            WHERE
+             msg.STATUS = '1'
+             AND  msg.sender = us.id
+
+    </select>
+
+
+
+
+
+</mapper>

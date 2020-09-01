@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+    <mapper namespace="com.julong.oasystem.dao.DeptDao">
+
+    <resultMap id="BaseResultMap" type="com.julong.oasystem.entity.DeptAndUserVO">
+
+        <id column="id" jdbcType="INTEGER" property="deptId"/>
+        <result column="deptName" jdbcType="VARCHAR" property="deptName"/>
+        <result column="parentid" jdbcType="VARCHAR" property="parentid"/>
+        <result column="introduce" jdbcType="VARCHAR" property="introduce"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="createTime" jdbcType="DATE" property="createTime"/>
+
+        <collection property="users" ofType="com.julong.oasystem.entity.User">
+            <id column="userid" property="userid" jdbcType="VARCHAR"/>
+            <result column="name" property="name" jdbcType="VARCHAR"/>
+            <result column="main_department" property="main_department" jdbcType="INTEGER"/>
+        </collection>
+
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id as "id", deptName as "deptName", parentid  as "parentid", introduce as "introduce", d.createTime as "createTime",d.status as "status"
+    </sql>
+
+    <select id="count" resultType="Integer">
+        SELECT count(0)
+        FROM OA_DEPT  obj
+        WHERE 1=1
+
+    </select>
+
+    <!--
+   查询出所有部门下的所有用户
+-->
+    <select id="selectDeptAndUser" resultMap="BaseResultMap">
+        select u.userid as "userid" ,u.name as "name",
+        <include refid="Base_Column_List"/>
+        from oa_dept d
+        LEFT JOIN oa_wechat_user u on d.id=u.main_department
+
+    </select>
+
+
+    <select id="listByPage" resultType="com.alibaba.fastjson.JSONObject">
+
+        SELECT
+        obj.id  as "id",
+	    obj.deptCode as "deptCode",
+	    obj.deptName as "deptName",
+	    obj.parentid  as "parentid",
+	    parent.deptName as "parentName",
+	    obj.status as "status",
+	    obj.introduce as "introduce",
+        TO_CHAR(obj.createTime,'yyyy-mm-dd hh24:mi:ss')  as "createTime"
+        FROM OA_DEPT obj, OA_DEPT parent
+        WHERE obj.parentid=parent.id
+        AND obj.status=0
+        ORDER BY obj.id
+    </select>
+
+
+    <select id="selectList" resultType="com.alibaba.fastjson.JSONObject">
+        select
+        	id  as "id",
+	        deptCode as "deptCode",
+	        deptName as "name",
+	        parentid  as "parentid",
+	        status as "status",
+	        introduce as "introduce"
+
+        from OA_DEPT where 1=1
+    </select>
+
+    <update id="update" parameterType="com.alibaba.fastjson.JSONObject">
+        UPDATE OA_DEPT
+        <set>
+            <if test="deptCode != null" >
+                deptCode = #{deptCode,jdbcType=VARCHAR},
+            </if>
+            <if test="deptName != null" >
+                deptName = #{deptName,jdbcType=VARCHAR},
+            </if>
+            <if test="parentid != null" >
+                parentid = #{parentid,jdbcType=INTEGER},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="introduce != null" >
+                introduce = #{introduce,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+
+    <select id="getWeChatDep" resultType="com.alibaba.fastjson.JSONObject">
+        select
+        	id  as "id",
+	        deptCode as "deptCode",
+	        deptName as "name",
+	        parentid  as "parentid",
+	        status as "status",
+	        introduce as "introduce"
+
+        from OA_DEPT where 1=1
+    </select>
+
+     <delete id="deleteWeChatDep" parameterType="java.lang.Long">
+		delete from
+			OA_DEPT where 1=1
+         <if test="id !='' and id !=null">
+             and id = #{id}
+         </if>
+	</delete>
+
+
+
+    <insert id="insertWeChatDep" parameterType="com.alibaba.fastjson.JSONObject">
+        INSERT INTO OA_DEPT (id, deptCode,deptName, parentid)
+        VALUES (#{id},#{id}, #{deptname}, #{parentid})
+    </insert>
+
+</mapper>

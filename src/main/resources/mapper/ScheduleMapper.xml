@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.julong.oasystem.dao.ScheduleDao">
+
+    <resultMap id="BaseResultMap" type="com.julong.oasystem.entity.ScheduleVO">
+        <id column="sId" property="id" jdbcType="NUMERIC"/>
+        <result column="createBy" property="createBy" jdbcType="VARCHAR"/>
+        <result column="startTime" property="startTime" jdbcType="DATE"/>
+        <result column="endTime" property="endTime" jdbcType="DATE"/>
+        <result column="createTime" property="createTime" jdbcType="DATE"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="descr" property="descr" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="isComplete" property="isComplete" jdbcType="NUMERIC"/>
+
+        <association property="user" javaType="com.julong.oasystem.entity.User">
+            <result column="sName" property="name"/>
+            <association property="deptPo" javaType="com.julong.oasystem.entity.DepartmentVO">
+                <result property="deptName" column="name"/>
+            </association>
+        </association>
+        <collection property="userList" ofType="com.julong.oasystem.entity.User">
+            <id column="uid" property="uid"/>
+            <result column="mName" property="name"/>
+            <result column="dept" property="dept"/>
+        </collection>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+        s.id as sId, createBy, s.startTime, s.endTime,s.createTime, title, s.descr, s.status,isComplete,
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+       u.uid,u.name as mName,u.MAIN_DEPARTMENT,uu.nickname as sName
+        from oa_schedule s
+        INNER JOIN oa_user uu ON uu.id = s.createBy
+        LEFT JOIN oa_schedule_user su ON su.s_Id = s.ID
+        LEFT JOIN OA_WECHAT_USER U ON su.su_Id = U.USERID
+
+        where s.id = #{id,jdbcType=NUMERIC}
+    </select>
+
+    <select id="getCalendarSchedule" resultType="com.julong.oasystem.entity.CalendarScheduleVO" parameterType="java.lang.Integer">
+        select
+        s.id as sId, createBy, s.startTime, s.endTime,s.createTime, title, s.descr, s.status,isComplete
+
+        from oa_schedule s
+
+        where s.isComplete = 0
+    </select>
+
+
+    <select id="selectScheduleList" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        u.name as mName,u.MAIN_DEPARTMENT,uu.nickname as sName
+        from oa_schedule s
+        INNER JOIN oa_user uu ON uu.id = s.createBy
+        LEFT JOIN oa_schedule_user su ON su.s_Id=s.id
+        LEFT JOIN OA_WECHAT_USER u ON su.su_Id = u.USERID
+        <where>
+            <if test="id !=null and id!=''">
+                 id =#{id}
+            </if>
+            <if test="createBy !=null and createBy!=''">
+                and createBy =#{createBy}
+            </if>
+            <if test="startTime !=null">
+                <![CDATA[   and DATE_FORMAT(s.createTime, '%Y-%m-%d')>=  DATE_FORMAT(#{startTime}, '%Y-%m-%d')   ]]>
+            </if>
+            <if test="endTime !=null">
+                <![CDATA[  and DATE_FORMAT(s.createTime, '%Y-%m-%d') <= DATE_FORMAT(#{endTime}, '%Y-%m-%d')    ]]>
+            </if>
+
+            <if test="isComplete!=null and isComplete!=''">
+                and  isComplete = #{isComplete}
+            </if>
+        </where>
+    </select>
+
+
+    <delete id="deleteByPrimaryKeys" parameterType="java.lang.Integer">
+        delete from oa_schedule
+        where id IN
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id,jdbcType=NUMERIC}
+        </foreach>
+    </delete>
+
+    <insert id="insertSelective" parameterType="com.julong.oasystem.entity.ScheduleVO" useGeneratedKeys="true" keyColumn="id"
+            keyProperty="id">
+        <selectKey  keyProperty="id" resultType="int" order="BEFORE">
+            select nvl(max(id),0)+1 from oa_schedule
+        </selectKey>
+        insert into oa_schedule
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="createBy != null">
+                createBy,
+            </if>
+            <if test="startTime != null">
+                startTime,
+            </if>
+            <if test="endTime != null">
+                endTime,
+            </if>
+            <if test="createTime != null">
+                createTime,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="descr != null">
+                descr,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=NUMERIC},
+            </if>
+            <if test="createBy != null">
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                #{startTime,jdbcType=DATE},
+            </if>
+            <if test="endTime != null">
+                #{endTime,jdbcType=DATE},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=DATE},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="descr != null">
+                #{descr,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.julong.oasystem.entity.ScheduleVO">
+        update oa_schedule
+        <set>
+            <if test="createBy != null">
+                createBy = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                startTime = #{startTime,jdbcType=DATE},
+            </if>
+            <if test="endTime != null">
+                endTime = #{endTime,jdbcType=DATE},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="descr != null">
+                descr = #{descr,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="isComplete != null">
+                isComplete = #{isComplete,jdbcType=NUMERIC},
+            </if>
+
+        </set>
+        where id = #{id,jdbcType=NUMERIC}
+    </update>
+</mapper>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.julong.oasystem.dao.MeetingRoomDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <select id="count" resultType="Integer">
+        SELECT count(0)
+        FROM OA_MEETINGROOM  obj
+        WHERE 1=1
+
+    </select>
+
+
+    <select id="listByPage" resultType="com.alibaba.fastjson.JSONObject">
+
+        SELECT
+        obj.id as "id",
+        obj.meetRoomName as "meetRoomName",
+        obj.meetRoomPlace as "meetRoomPlace",
+        obj.capacity as "capacity",
+        obj.status as "status",
+        TO_CHAR(obj.createTime,'yyyy-mm-dd hh24:mi:ss')  as "createTime"
+        FROM OA_MEETINGROOM obj
+        WHERE status != 0
+        ORDER BY obj.id
+    </select>
+
+    <insert id="insert" parameterType="com.alibaba.fastjson.JSONObject">
+
+        <selectKey  keyProperty="id" resultType="int" order="BEFORE">
+            select nvl(max(id),0)+1 from OA_MEETINGROOM
+        </selectKey>
+
+        INSERT INTO OA_MEETINGROOM
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="meetRoomName  != null">
+                meetRoomName ,
+            </if>
+            <if test="meetRoomPlace != null">
+                meetRoomPlace,
+            </if>
+            <if test="capacity != null">
+                capacity,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="meetRoomName != null">
+                #{meetRoomName,jdbcType=VARCHAR},
+            </if>
+            <if test="meetRoomPlace != null">
+                #{meetRoomPlace,jdbcType=VARCHAR},
+            </if>
+            <if test="capacity != null">
+                #{capacity,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+        </trim>
+
+    </insert>
+
+    <update id="update" parameterType="com.alibaba.fastjson.JSONObject">
+        UPDATE OA_MEETINGROOM
+        SET
+            meetRoomName=#{meetRoomName},
+            meetRoomPlace=#{meetRoomPlace},
+            capacity=#{capacity},
+            status=#{status}
+        WHERE
+        id = #{id}
+    </update>
+
+    <update id="booking" parameterType="java.lang.Long">
+        update
+        OA_MEETINGROOM set status=3
+        where
+        id = #{id}
+    </update>
+
+    <update id="delete" parameterType="java.lang.Long">
+        update
+        OA_MEETINGROOM set status=0
+        where
+        id = #{id}
+    </update>
+
+    <select id="selectList" resultType="com.alibaba.fastjson.JSONObject">
+      SELECT
+        obj. ID AS "id",
+        (
+            obj.meetRoomName ||'--'|| obj.meetRoomPlace ||'--容量：'|| obj.capacity
+        ) AS "room"
+    FROM
+        OA_MEETINGROOM obj
+    WHERE
+        obj.status !=0
+
+    </select>
+
+    <!--名字查询-->
+    <select id="selectByRoomName" parameterType="com.alibaba.fastjson.JSONObject" resultType="com.alibaba.fastjson.JSONObject">
+    SELECT
+        obj.id as "id",
+        obj.meetRoomName as "meetRoomName",
+        obj.meetRoomPlace as "meetRoomPlace",
+        obj.capacity as "capacity",
+        obj.status as "status"
+    FROM
+    oa_meetingroom obj
+    WHERE obj.id = #{meet_RoomId}
+  </select>
+
+
+    <!--修改房间状态-->
+    <update id="updateByRoomName" parameterType="com.alibaba.fastjson.JSONObject">
+        update oa_meetingroom
+        <set>
+            <if test="status != null">
+                status=#{status},
+            </if>
+        </set>
+        where meetRoomName = #{meetRoomName}
+    </update>
+
+
+
+</mapper>

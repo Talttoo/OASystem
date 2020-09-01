@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.julong.oasystem.dao.WeChatCacheDao">
+
+    <select id="getWeChatCache" resultType="com.alibaba.fastjson.JSONObject">
+        select
+         a.key  as "key",
+         a.value  as "value",
+         a.expire_time  as "expire_time",
+         a.create_time  as "create_time",
+         a.pk_org  as "pk_org"
+
+         from OA_WECHAT_CACHE a
+         where a.expire_time > SYSDATE and a.key=#{key} and a.pk_org = #{orgPk} and rownum = 1
+    </select>
+    
+    
+     <delete id="deleteWeChatCache">
+		delete from
+			OA_WECHAT_CACHE where  pk_org = #{orgPk}
+	</delete>
+
+
+	<insert id="insertWeChatCache" parameterType="com.alibaba.fastjson.JSONObject">
+        INSERT INTO OA_WECHAT_CACHE (key, value, expire_time,create_time,pk_org)
+        VALUES (#{key}, #{value}, to_date(#{expire_time,jdbcType=DATE}, 'yyyy-mm-dd hh24:mi:ss'),SYSDATE,#{orgPk})
+    </insert>
+
+</mapper>

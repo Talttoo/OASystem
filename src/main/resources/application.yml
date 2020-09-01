@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: oaservice
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@10.38.0.18:1521:HISDB
+#    username: SPYY
+#    password: HKpyy3824tgrNF4936
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: jafy
+    password: jafy
+#    url: jdbc:oracle:thin:@10.0.0.10:1521:orcl
+#    username: spyy
+#    password: spyy
+#  activiti:
+#    check-process-definitions: false
+
+server:
+  port: 9090
+
+
+
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://192.168.0.151:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
+#      defaultZone: http://192.168.0.103:8761/eureka/
+#      defaultZone: http://10.38.12.51:8762/eureka/
+  enable: true
+#
+#security:
+#  basic:
+#  enabled: false
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+mybatis:
+  mapperLocations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+prop:
+  upload-folder: D:/images/
+
+logging:
+    config: classpath:conf/logback-spring.xml

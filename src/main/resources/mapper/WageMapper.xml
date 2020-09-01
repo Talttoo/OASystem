@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.julong.oasystem.dao.WageDao">
+
+    <select id="queryWage" resultType="com.julong.oasystem.entity.wage.WageVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            wage_month as "wageMonth",
+            TO_CHAR(create_time,'yyyy-mm-dd hh:mm:ss') as "createTime",
+            status as  "status"
+        FROM OA_WAGE
+         WHERE
+        status = 0
+        ORDER BY id DESC
+    </select>
+
+    <select id="queryWageWithStatus1" resultType="com.julong.oasystem.entity.wage.WageVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            wage_month as "wageMonth",
+            wage_column as "wageColumn",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as  "status"
+        FROM OA_WAGE
+         WHERE status = 1
+    </select>
+
+    <select id="queryWageByUser" resultType="com.julong.oasystem.entity.wage.WageVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            wage_month as "wageMonth",
+            wage_column as "wageColumn",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as  "status"
+        FROM OA_WAGE
+        WHERE
+        user_id=#{userId} AND status in (0,1,2)
+    </select>
+
+    <select id="queryWageByID" resultType="com.julong.oasystem.entity.wage.WageVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            wage_month as "wageMonth",
+            wage_column as "wageColumn",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as  "status"
+        FROM OA_WAGE
+        WHERE
+        id=#{id}
+    </select>
+
+
+
+    <insert id="insertWage" keyProperty="id" keyColumn="id"
+            parameterType="com.julong.oasystem.entity.wage.WageVO">
+        INSERT INTO OA_WAGE
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="wageMonth != null">
+                wage_month,
+            </if>
+            <if test="wageColumn != null">
+                wage_column,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+
+
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="wageMonth != null">
+                #{wageMonth,jdbcType=VARCHAR},
+            </if>
+            <if test="wageColumn != null">
+                #{wageColumn,jdbcType=DATE},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=DATE},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+
+        </trim>
+
+    </insert>
+
+    <update id="updateWage" parameterType="com.julong.oasystem.entity.wage.WageVO">
+        UPDATE OA_WAGE
+        <set>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="wageMonth != null">wage_month = #{wageMonth},</if>
+            <if test="wageColumn != null">wage_column = #{wageColumn},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="status != null">status = #{status}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteWage">
+        DELETE FROM
+        OA_WAGE
+        WHERE id = #{id}
+    </delete>
+
+    <select id="queryWageByTitle" resultType="com.julong.oasystem.entity.wage.WageVO">
+        SELECT
+            id  as "id",
+            user_id as "userId",
+            wage_month as "wageMonth",
+            wage_column as "wageColumn",
+            TO_CHAR(create_time,'yyyy-mm-dd hh24:mi:ss') as "createTime",
+            status as  "status"
+        FROM OA_WAGE
+        WHERE
+        wage_month LIKE "%"#{wageMonth}"%" AND status in (0,1,2)
+    </select>
+
+</mapper>

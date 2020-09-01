@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.julong.oasystem.dao.CriticalValueDao">
+
+
+
+    <insert id="addCritical" parameterType="com.alibaba.fastjson.JSONObject">
+
+
+        INSERT INTO AS_CRITICAL_VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="itemCode != null">
+                ITEM_CODE,
+            </if>
+            <if test="upBound != null">
+                UPBOUND,
+            </if>
+            <if test="downBound != null">
+                DOWNBOUND,
+            </if>
+            <if test="disable != null">
+                DISABLE,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="itemCode != null">
+                #{itemCode,jdbcType=VARCHAR},
+            </if>
+            <if test="upBound != null">
+                #{upBound,jdbcType=VARCHAR},
+            </if>
+            <if test="downBound != null">
+                #{downBound,jdbcType=VARCHAR},
+            </if>
+            <if test="disable != null">
+                #{disable},
+            </if>
+        </trim>
+    </insert>
+
+
+    <select id="findCriticalValue" parameterType="String" resultType="com.julong.oasystem.entity.CriticalValueVO">
+        SELECT
+        va.item_code               as              "itemCode",
+        va.upbound                 as              "upBound",
+        va.downbound               as              "downBound"
+
+
+        FROM AS_CRITICAL_VALUES va
+        WHERE va.item_code =  #{itemCode}
+    </select>
+
+    <select id="countCritical" resultType="Integer">
+        SELECT count(0)
+        FROM  AS_CRITICAL_VALUES
+        WHERE disable = 'F'
+    </select>
+
+
+
+    <select id="listItem" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+
+        ROOM_CODE   as "roomCode",
+        ITEM_CODE   as "itemCode",
+        ITEM_NAME   as "itemName",
+        SEQ_NO      as "seqNo",
+        MACH_GATE   as "machGate",
+        ENG_NAME    as "engName",
+        TYPE        as "type",
+        UNIT        as "unit",
+        PRICE       as "price",
+        PREC        as "prec",
+        EXP         as "exp",
+        RESULT      as "result",
+        PRAC_WAY    as "pracWay",
+        RULE        as "rule"
+
+        FROM AS_CODE_ITEM
+        ORDER BY ITEM_CODE DESC
+
+    </select>
+
+<!--    CASE va.disable-->
+<!--    WHEN  'T' THEN 'true'-->
+<!--    else 'false'-->
+<!--    end "disable"-->
+    <select id="listCriticalValue" resultType="com.julong.oasystem.entity.CriticalValueVO">
+        SELECT
+        va.item_code               as              "itemCode",
+        item.item_name             as              "itemName",
+        va.upbound                 as              "upBound",
+        va.downbound               as              "downBound",
+        CASE va.disable
+            WHEN  'T' THEN 'true'
+            else 'false'
+	    end "disable"
+
+        FROM AS_CRITICAL_VALUES va ,AS_CODE_ITEM item
+        WHERE va.item_code = item.item_code
+        ORDER BY va.item_code DESC
+
+    </select>
+
+
+
+    <update id="updateCritical" parameterType="com.alibaba.fastjson.JSONObject">
+        UPDATE AS_CRITICAL_VALUES
+        <set>
+        <if test="itemCode != null" >
+            item_code = #{itemCode,jdbcType=VARCHAR},
+        </if>
+        <if test="upBound != null" >
+            upbound = #{upBound,jdbcType=VARCHAR},
+        </if>
+        <if test="downBound != null" >
+            downbound = #{downBound,jdbcType=VARCHAR},
+        </if>
+        <if test="disable != null" >
+            disable = #{disable,jdbcType=VARCHAR},
+        </if>
+        </set>
+        WHERE item_code = #{itemcode}
+    </update>
+
+
+
+    <delete id="deleteCritical" parameterType="com.alibaba.fastjson.JSONObject">
+        delete from AS_CRITICAL_VALUES
+        WHERE ITEM_CODE = #{itemCode}
+        AND  UPBOUND = #{upBound}
+        AND  DOWNBOUND = #{downBound}
+        AND   DISABLE = #{disable}
+    </delete>
+
+
+
+
+
+</mapper>

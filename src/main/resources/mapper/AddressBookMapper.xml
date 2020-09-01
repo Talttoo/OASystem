@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.julong.oasystem.dao.AddressBookDao">
+
+	<select id="countWebChatUser" resultType="Integer">
+        SELECT
+			count(0) from oa_user	 where 1=1
+		<if test="username!='' and username !=null">
+			and username = #{username}
+		</if> 
+		<if test="id!='' and id !=null">
+			and id = #{id}
+		</if>  
+        <if test="deptCode !='' and deptCode !=null">
+            and deptCode = #{deptCode}
+        </if>
+	
+    </select>
+
+
+    <select id="getWebChatUser" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+		id   	  as "userid",
+		username  as "username",
+		nickname  as "nickname",
+		tel 	  as "tel",
+		email 	  as "email",
+		avatar 	  as "avatar",
+		deptCode  as "deptCode"
+		from oa_user
+		where 1=1
+		<if test="userid!='' and userid !=null">
+			and id = #{userid}
+		</if>
+		<if test="name!='' and name !=null">
+			and nickname = #{name}
+		</if>
+        <if test="deptCode !='' and deptCode !=null">
+            and deptCode = #{deptCode}
+        </if>
+
+        order by id
+
+    </select>
+    
+    
+
+</mapper>

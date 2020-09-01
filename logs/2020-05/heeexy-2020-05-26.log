@@ -1,0 +1,688 @@
+2020-05-26 09:40:33.183 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 2884 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 09:40:33.198 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 09:40:37.613 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 5.631 seconds (JVM running for 8.183)
+2020-05-26 09:41:03.957 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-1] - HikariPool-1 - Starting...
+2020-05-26 09:41:03.959 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-1] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 09:41:04.204 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-1] - HikariPool-1 - Start completed.
+2020-05-26 09:41:06.391 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:41:06.391 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:41:11.566 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:41:11.566 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:41:11.569 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:41:11.569 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:41:11.570 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:41:11.570 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:41:17.729 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:41:17.729 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:08.646 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:08.646 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:08.674 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:08.675 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:08.676 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:08.676 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:09.431 INFO  --- [UserRealm.java:38][http-nio-9090-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:09.432 INFO  --- [UserRealm.java:39][http-nio-9090-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:12.338 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:12.338 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:12.343 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:12.344 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:12.344 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:12.345 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:14.384 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:14.384 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:14.686 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:14.687 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:16.277 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:16.277 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:47.242 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:47.243 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:47.246 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:47.246 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:42:47.247 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:42:47.247 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:51:57.793 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:51:57.793 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:51:58.096 INFO  --- [UserRealm.java:38][http-nio-9090-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:51:58.097 INFO  --- [UserRealm.java:39][http-nio-9090-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:51:58.097 INFO  --- [UserRealm.java:38][http-nio-9090-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:51:58.097 INFO  --- [UserRealm.java:39][http-nio-9090-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:52:06.827 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:52:06.828 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 09:52:06.829 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 09:52:06.830 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:16.878 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:16.879 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:16.879 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:16.880 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:18.940 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:18.941 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:26.654 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:26.655 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:26.655 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:26.655 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:27.819 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:27.819 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:31.495 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:31.499 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:31.502 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:31.503 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:53.370 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:53.371 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:11:53.372 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:11:53.372 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:19:50.396 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:19:50.396 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:19:50.397 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:19:50.398 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:20:07.480 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:20:07.480 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:20:07.481 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:20:07.481 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:22:12.781 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:22:12.781 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:22:12.782 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:22:12.782 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:23:50.120 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:23:50.120 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:23:50.121 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:23:50.121 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:26:49.049 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:26:49.050 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:26:49.051 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:26:49.051 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:29:19.561 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:29:19.561 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:29:19.562 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:29:19.562 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:29:29.878 INFO  --- [UserRealm.java:38][http-nio-9090-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:29:29.878 INFO  --- [UserRealm.java:39][http-nio-9090-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:29:29.883 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:29:29.884 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:29:29.885 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:29:29.885 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:29:51.749 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:29:51.749 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:29:51.750 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:29:51.750 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:30:20.970 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:30:20.971 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:30:20.973 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:30:20.973 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:35:29.226 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:35:29.226 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 10:35:29.227 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 10:35:29.228 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:00:48.675 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:00:48.675 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:00:48.676 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:00:48.676 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:00:53.266 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:00:53.267 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:01:22.748 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:01:22.749 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:01:22.749 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:01:22.749 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:01:29.289 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:01:29.289 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:01:29.590 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:01:29.591 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:01:29.591 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:01:29.591 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:01:57.935 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:01:57.935 INFO  --- [UserRealm.java:38][http-nio-9090-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 11:01:57.935 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 11:01:57.935 INFO  --- [UserRealm.java:39][http-nio-9090-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:19:02.382 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 9316 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 14:19:02.392 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 14:19:05.969 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.73 seconds (JVM running for 6.456)
+2020-05-26 14:31:06.021 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 8896 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 14:31:06.026 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 14:31:09.808 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.648 seconds (JVM running for 6.382)
+2020-05-26 14:34:11.499 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 8396 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 14:34:11.504 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 14:34:15.179 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.594 seconds (JVM running for 6.322)
+2020-05-26 14:35:04.006 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 14:35:04.008 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 14:35:04.236 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 14:35:09.664 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:35:09.665 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:35:09.673 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:35:09.674 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:38:45.412 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 8548 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 14:38:45.417 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 14:38:50.198 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 5.743 seconds (JVM running for 8.305)
+2020-05-26 14:43:01.826 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-4] - HikariPool-1 - Starting...
+2020-05-26 14:43:01.828 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-4] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 14:43:02.048 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-4] - HikariPool-1 - Start completed.
+2020-05-26 14:43:05.408 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:43:05.410 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:43:05.413 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:43:05.413 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:49:58.566 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 9476 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 14:49:58.572 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 14:50:02.247 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.914 seconds (JVM running for 6.799)
+2020-05-26 14:50:41.057 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 14:50:41.059 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 14:50:41.261 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 14:50:44.480 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:50:44.481 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:50:44.483 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:50:44.483 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:54:28.612 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 10188 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 14:54:28.617 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 14:54:32.327 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.407 seconds (JVM running for 6.011)
+2020-05-26 14:55:00.015 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 14:55:00.018 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 14:55:00.210 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 14:55:03.592 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:55:03.593 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 14:55:03.595 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 14:55:03.595 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:03:27.277 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 7468 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 15:03:27.281 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 15:03:30.517 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.698 seconds (JVM running for 6.356)
+2020-05-26 15:03:46.995 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 15:03:46.999 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 15:03:47.199 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 15:03:50.589 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:03:50.589 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:03:50.592 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:03:50.592 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:07:03.444 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 2704 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 15:07:03.449 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 15:07:06.804 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.541 seconds (JVM running for 6.248)
+2020-05-26 15:07:11.626 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 15:07:11.629 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 15:07:11.874 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 15:07:15.189 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:07:15.196 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:07:15.229 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:07:15.231 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:07:15.252 ERROR --- [GlobalExceptionHandler.java:44][http-nio-9090-exec-4] - 异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+### The error may exist in file [D:\weixin\project\OASystem\target\classes\mapper\WebChatDep.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select          id  as 'id',          deptCode as 'deptCode',          deptName as 'deptName',          parentid  as 'parentid',          status as 'status',          introduce as 'introduce',          from OA_DEPT where 1=1
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy64.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy73.getWebChatDep(Unknown Source)
+	at com.julong.oasystem.service.impl.AddressBookServiceImpl.listWebChatOrg(AddressBookServiceImpl.java:47)
+	at com.julong.oasystem.controller.AddressBookController.listWebChatOrg(AddressBookController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:807)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 73 common frames omitted
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 103 common frames omitted
+2020-05-26 15:07:15.255 WARN  --- [AbstractHandlerExceptionResolver.java:199][http-nio-9090-exec-4] - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+### The error may exist in file [D:\weixin\project\OASystem\target\classes\mapper\WebChatDep.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select          id  as 'id',          deptCode as 'deptCode',          deptName as 'deptName',          parentid  as 'parentid',          status as 'status',          introduce as 'introduce',          from OA_DEPT where 1=1
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+]
+2020-05-26 15:07:44.653 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 8260 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 15:07:44.656 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 15:07:47.679 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.285 seconds (JVM running for 6.152)
+2020-05-26 15:07:57.258 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 15:07:57.261 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 15:07:57.468 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 15:08:00.708 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:08:00.721 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:08:00.738 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:08:00.738 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:08:00.753 ERROR --- [GlobalExceptionHandler.java:44][http-nio-9090-exec-4] - 异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+### The error may exist in file [D:\weixin\project\OASystem\target\classes\mapper\WebChatDep.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select          id  as 'id',          deptCode as 'deptCode',          deptName as 'deptName',          parentid  as 'parentid',          status as 'status',          introduce as 'introduce'          from OA_DEPT where 1=1
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy64.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy73.getWebChatDep(Unknown Source)
+	at com.julong.oasystem.service.impl.AddressBookServiceImpl.listWebChatOrg(AddressBookServiceImpl.java:47)
+	at com.julong.oasystem.controller.AddressBookController.listWebChatOrg(AddressBookController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:807)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 73 common frames omitted
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00923: 未找到要求的 FROM 关键字
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 103 common frames omitted
+2020-05-26 15:08:00.759 WARN  --- [AbstractHandlerExceptionResolver.java:199][http-nio-9090-exec-4] - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+### The error may exist in file [D:\weixin\project\OASystem\target\classes\mapper\WebChatDep.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select          id  as 'id',          deptCode as 'deptCode',          deptName as 'deptName',          parentid  as 'parentid',          status as 'status',          introduce as 'introduce'          from OA_DEPT where 1=1
+### Cause: java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-00923: 未找到要求的 FROM 关键字
+]
+2020-05-26 15:10:52.560 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 8760 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 15:10:52.566 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 15:10:55.618 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.5 seconds (JVM running for 6.208)
+2020-05-26 15:11:02.001 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 15:11:02.004 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 15:11:02.208 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 15:11:05.432 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:11:05.432 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:11:05.434 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:11:05.435 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:29.036 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:29.036 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:32.482 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:32.482 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:32.483 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:32.483 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:35.398 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:35.399 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:38.519 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:38.519 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:38.520 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:38.520 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:43.908 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:43.909 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:55.941 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:55.942 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:17:55.943 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:17:55.943 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:18:04.597 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:18:04.597 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:18:04.598 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:18:04.598 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:18:04.600 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:18:04.600 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:18:09.275 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:18:09.275 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:18:09.278 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:18:09.283 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:18:15.246 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:18:15.247 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:18:15.247 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:18:15.247 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:33:14.374 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:33:14.374 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:33:14.377 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:33:14.377 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:34:47.162 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:34:47.163 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:34:47.163 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:34:47.164 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:34:56.442 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:34:56.443 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:34:56.444 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:34:56.444 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:36:18.056 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:36:18.056 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:36:18.057 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:36:18.057 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:36:32.786 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:36:32.786 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:36:32.787 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:36:32.787 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:37:30.156 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:37:30.157 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:37:30.157 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:37:30.157 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:40:24.194 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:40:24.195 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:40:24.196 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:40:24.196 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:44:57.019 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 8004 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 15:44:57.024 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 15:45:00.368 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.33 seconds (JVM running for 6.014)
+2020-05-26 15:46:19.571 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 15:46:19.575 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 15:46:19.790 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 15:46:23.049 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:46:23.049 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:46:23.051 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:46:23.052 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:57:46.119 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:57:46.119 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:57:46.120 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:57:46.121 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:58:02.528 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:58:02.529 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 15:58:02.531 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 15:58:02.531 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:05:51.964 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 9836 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 16:05:51.971 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 16:05:55.486 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.493 seconds (JVM running for 6.161)
+2020-05-26 16:06:05.070 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 16:06:05.073 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 16:06:05.269 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 16:06:08.345 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:06:08.346 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:06:08.348 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:06:08.349 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:36:55.048 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 5180 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 16:36:55.053 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 16:36:58.141 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.367 seconds (JVM running for 6.055)
+2020-05-26 16:37:13.158 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-4] - HikariPool-1 - Starting...
+2020-05-26 16:37:13.160 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-4] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 16:37:13.400 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-4] - HikariPool-1 - Start completed.
+2020-05-26 16:37:18.249 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:37:18.250 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:37:18.251 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:37:18.252 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:38:49.684 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:38:49.685 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:38:49.686 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:38:49.687 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:51:20.221 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 9728 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 16:51:20.225 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 16:51:23.407 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.455 seconds (JVM running for 6.076)
+2020-05-26 16:51:41.035 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-2] - HikariPool-1 - Starting...
+2020-05-26 16:51:41.038 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-2] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 16:51:41.235 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-2] - HikariPool-1 - Start completed.
+2020-05-26 16:51:45.169 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:51:45.170 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:51:45.172 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:51:45.172 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:58:56.983 INFO  --- [StartupInfoLogger.java:55][restartedMain] - Starting OasystemApplication on Win-1811022255 with PID 8184 (D:\weixin\project\OASystem\target\classes started by Administrator in D:\weixin\project\OASystem)
+2020-05-26 16:58:56.988 INFO  --- [SpringApplication.java:651][restartedMain] - No active profile set, falling back to default profiles: default
+2020-05-26 16:59:00.400 INFO  --- [StartupInfoLogger.java:61][restartedMain] - Started OasystemApplication in 4.817 seconds (JVM running for 6.321)
+2020-05-26 16:59:05.812 INFO  --- [HikariDataSource.java:110][http-nio-9090-exec-1] - HikariPool-1 - Starting...
+2020-05-26 16:59:05.815 WARN  --- [DriverDataSource.java:70][http-nio-9090-exec-1] - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2020-05-26 16:59:06.025 INFO  --- [HikariDataSource.java:123][http-nio-9090-exec-1] - HikariPool-1 - Start completed.
+2020-05-26 16:59:09.072 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:09.073 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:59:09.075 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:09.075 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:59:22.030 INFO  --- [UserRealm.java:38][http-nio-9090-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:22.031 INFO  --- [UserRealm.java:39][http-nio-9090-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:59:38.989 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:38.989 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:59:38.990 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:38.992 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:59:41.992 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:41.992 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:59:49.970 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:49.970 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 16:59:49.971 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 16:59:49.971 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:02:52.219 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:02:52.220 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:02:52.220 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:02:52.221 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:02:52.225 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:02:52.225 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:02:56.206 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:02:56.207 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:02:56.212 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:02:56.213 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:03:03.724 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:03:03.725 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:03:03.726 INFO  --- [UserRealm.java:38][http-nio-9090-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:03:03.726 INFO  --- [UserRealm.java:39][http-nio-9090-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:03:09.991 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:03:09.991 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:27:15.236 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:27:15.236 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:27:15.237 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:27:15.237 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:27:15.237 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:27:15.238 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:27:24.069 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:27:24.069 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:27:24.070 INFO  --- [UserRealm.java:38][http-nio-9090-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:27:24.071 INFO  --- [UserRealm.java:39][http-nio-9090-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:27:40.518 INFO  --- [UserRealm.java:38][http-nio-9090-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:27:40.518 INFO  --- [UserRealm.java:39][http-nio-9090-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:28:25.626 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:28:25.627 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:28:33.039 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:28:33.040 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:29:03.355 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:29:03.356 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:29:03.412 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:29:03.413 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:29:21.421 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:29:21.421 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:29:21.424 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"艾斯","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10001}
+2020-05-26 17:29:21.424 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:29:38.457 INFO  --- [UserRealm.java:38][http-nio-9090-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:29:38.457 INFO  --- [UserRealm.java:39][http-nio-9090-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:30:09.542 INFO  --- [UserRealm.java:38][http-nio-9090-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:30:09.543 INFO  --- [UserRealm.java:39][http-nio-9090-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:30:09.569 INFO  --- [UserRealm.java:38][http-nio-9090-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:30:09.570 INFO  --- [UserRealm.java:39][http-nio-9090-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:30:33.507 INFO  --- [UserRealm.java:38][http-nio-9090-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:30:33.507 INFO  --- [UserRealm.java:39][http-nio-9090-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:30:33.511 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:30:33.512 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:30:33.513 INFO  --- [UserRealm.java:38][http-nio-9090-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:30:33.514 INFO  --- [UserRealm.java:39][http-nio-9090-exec-1] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:30:35.851 INFO  --- [UserRealm.java:38][http-nio-9090-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:30:35.851 INFO  --- [UserRealm.java:39][http-nio-9090-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2020-05-26 17:30:35.854 INFO  --- [UserRealm.java:38][http-nio-9090-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"比利","roleName":"主任","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10002}
+2020-05-26 17:30:35.854 INFO  --- [UserRealm.java:39][http-nio-9090-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
