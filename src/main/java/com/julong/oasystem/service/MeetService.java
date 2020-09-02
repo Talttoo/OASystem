@@ -23,6 +23,8 @@ public interface MeetService {
 
     JSONObject newListMeeting(JSONObject jsonObject);
 
+    JSONObject selectMeetingById(String id);
+
     JSONObject delete(Long id);
 
     JSONObject selectList(JSONObject jsonObject);

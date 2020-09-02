@@ -65,10 +65,26 @@ public class MeetServiceImpl implements MeetService {
         return JsonResultUtil.successPage(jsonObject, list, (int)page.getTotal());
     }
 
+    /**
+     * 获取首页会议列表
+     * @param jsonObject
+     * @return
+     */
     @Override
     public JSONObject newListMeeting(JSONObject jsonObject) {
         List<JSONObject> list = meetDao.newListMeeting(jsonObject);
         return JsonResultUtil.successJson(list);
+    }
+
+    /**
+     * 根据id获取会议详情
+     * @param id
+     * @return
+     */
+    @Override
+    public JSONObject selectMeetingById(String id) {
+        JSONObject jsonObject =  meetDao.selectMeetingById(id);
+        return  JsonResultUtil.successJson(jsonObject);
     }
 
     @Override

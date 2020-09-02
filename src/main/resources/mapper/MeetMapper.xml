@@ -57,6 +57,24 @@
         WHERE  ROWNUM &lt;= 5
     </select>
 
+    <select id="selectMeetingById" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            obj.id as "id",
+            obj.create_By as "create_By",
+            users.nickname as "nickname",
+            obj.title as "title",
+            obj.descr as "descr",
+            obj.meet_RoomId   as "meet_RoomId",
+            room.meetRoomName as "roomName",
+            obj.status as "status",
+            TO_CHAR(obj.start_Time,'yyyy-mm-dd hh24:mi:ss')  as "start_Time",
+            TO_CHAR( obj.create_Time,'yyyy-mm-dd hh24:mi:ss')  as "create_Time"
+
+            FROM OA_MEET obj,OA_USER users,OA_MEETINGROOM room
+            WHERE obj.id = #{id}
+            AND users.id = obj.create_By
+            AND  obj.meet_RoomId = room.id
+    </select>
 
     <insert id="insert" parameterType="com.alibaba.fastjson.JSONObject">
 

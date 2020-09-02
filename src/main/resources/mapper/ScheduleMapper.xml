@@ -149,6 +149,7 @@
             </if>
         </trim>
     </insert>
+
     <update id="updateByPrimaryKeySelective" parameterType="com.julong.oasystem.entity.ScheduleVO">
         update oa_schedule
         <set>

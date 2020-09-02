@@ -14,6 +14,8 @@ public interface MeetDao {
 
     List<JSONObject> newListMeeting(JSONObject jsonObject);
 
+    JSONObject selectMeetingById(String id);
+
     int delete(Long id);
 
     int count(JSONObject jsonObject);

@@ -20,7 +20,7 @@ import java.util.List;
  * @Description：会议相关Controller
  */
 @RestController
-@RequestMapping("meet")
+@RequestMapping("/meet")
 public class MeetController {
 
     @Autowired
@@ -139,6 +139,10 @@ public class MeetController {
         return meetService.newListMeeting(jsonObject);
     }
 
+    @GetMapping("/meetingDetail")
+    public JSONObject selectMeetingById(@RequestParam("id") String id){
+        return meetService.selectMeetingById(id);
+    }
 
     @GetMapping("selectList")
     public JSONObject selectList(HttpServletRequest request) {
