@@ -40,6 +40,9 @@ public interface ArticleDao {
 	 */
 	int updateArticle(JSONObject jsonObject);
 
+
+	int deleteArticle(JSONObject id);
+
 	/**
 	 * 文章分类列表
 	 * @return

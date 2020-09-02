@@ -88,6 +88,17 @@ public class ArticleController {
 		return articleService.updateArticle(requestJson);
 	}
 
+	/**
+	 * 修改文章
+	 */
+	@RequiresPermissions("article:delete")
+	@PostMapping("/deleteArticle")
+	public JSONObject deleteArticle(@RequestBody JSONObject id ) {
+
+		return articleService.deleteArticle(id);
+	}
+
+
 	@PostMapping("/singlefile")
 	public JSONObject singleFileUpload(MultipartFile file, String id) {
 

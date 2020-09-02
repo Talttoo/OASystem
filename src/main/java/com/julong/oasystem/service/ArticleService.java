@@ -38,6 +38,13 @@ public interface ArticleService {
 	JSONObject updateArticle(JSONObject jsonObject);
 
 	/**
+	 * 删除文章
+	 * @param id
+	 * @return
+	 */
+	JSONObject deleteArticle(JSONObject id);
+
+	/**
 	 * 文章分类列表
 	 */
 	JSONObject listType(JSONObject jsonObject);

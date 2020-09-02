@@ -92,6 +92,16 @@ public class ArticleServiceImpl implements ArticleService {
 		}
 	}
 
+	@Override
+	public JSONObject deleteArticle(JSONObject id) {
+		int res = articleDao.deleteArticle(id);
+		if(res>0){
+			return JsonResultUtil.successJson();
+		}else {
+			return JsonResultUtil.errorJson(401,"删除数据异常");
+		}
+	}
+
 	/**
 	 * 文章分类列表
 	 */
