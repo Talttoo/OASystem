@@ -53,7 +53,7 @@ public class SecurityCheckServiceImpl  implements SecurityCheckService {
         int pageRow = jsonObject.getIntValue("pageRow");
         Page<PaperVO> page = PageHelper.startPage(pageNum, pageRow);
         List<JSONObject> list = securityCheckDao.listByPage(jsonObject);
-        System.out.println("项目列表："+list.toString());
+       // System.out.println("项目列表："+list.toString());
 //		JSONArray jsonArray = JSON.parseArray(list.toString());
 //		List<JSONObject> jsonlist  = JSON.parseArray(jsonArray.toJSONString(),JSONObject.class) ;
         return JsonResultUtil.successPage(jsonObject, list, (int)page.getTotal());
@@ -75,17 +75,21 @@ public class SecurityCheckServiceImpl  implements SecurityCheckService {
         return null;
     }
 
+    /**
+     * 我的检查
+     * @param jsonObject
+     * @return
+     */
     @Override
     public JSONObject listByUser(JSONObject jsonObject) {
-        System.out.println("请求检查项目列表："+jsonObject.toJSONString());
+
         JsonResultUtil.fillPageParam(jsonObject);
 
-//		int count = articleDao.countArticle(jsonObject);
-//		System.out.println("文章列表数："+count);
-        int pageNum = jsonObject.getIntValue("pageNum");
-        int pageRow = jsonObject.getIntValue("pageRow");
-        Page<PaperVO> page = PageHelper.startPage(pageNum, pageRow);
+//        int pageNum = jsonObject.getIntValue("pageNum");
+//        int pageRow = jsonObject.getIntValue("pageRow");
+        Page<PaperVO> page = PageHelper.startPage(jsonObject.getIntValue("pageNum"), jsonObject.getIntValue("pageRow"));
         List<JSONObject> list = securityCheckDao.listByUser(jsonObject);
+        System.out.println("请求检查项目列表："+jsonObject.toJSONString());
         System.out.println("项目列表："+list.toString());
 //		JSONArray jsonArray = JSON.parseArray(list.toString());
 //		List<JSONObject> jsonlist  = JSON.parseArray(jsonArray.toJSONString(),JSONObject.class) ;

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.julong.oasystem.dao.MessageNoticesDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <select id="count" resultType="Integer">
+        SELECT count(0)
+        FROM OA_MESSAGE_NOTICES  msg
+        WHERE status='0'
+    </select>
+
+    <select id="countByType" resultType="Integer">
+        SELECT count(0)
+        FROM OA_MESSAGE_NOTICES  msg
+        WHERE status='0'
+        AND  MESSAGE_TYPE = #{type}
+    </select>
+
+    <select id="countByAllType" resultType="Integer">
+        SELECT count(0)
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 1
+        union all
+        SELECT count(0)
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 2
+        union all
+            SELECT count(0)
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 3
+        union all
+            SELECT count(0)
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 4
+    </select>
+
+    <select id="listByType" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+        msg.id as "id",
+        msg.MESSAGE_ID as "messageid",
+        msg.MESSAGE_TYPE as "type",
+        msg.MESSAGE_COVER as "cover",
+        msg.MESSAGE_TITLE as "title",
+        msg.MESSAGE_CONTENT as "content",
+        msg.status as "status",
+        TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+        FROM OA_MESSAGE_NOTICES msg
+        WHERE status = '0'
+        AND MESSAGE_TYPE = #{type}
+        ORDER BY msg.id
+    </select>
+
+    <select id="latestNewsByTypeAndCount" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT *
+        FROM(
+            SELECT *
+            FROM(
+                SELECT
+                    msg.id as "id",
+                    msg.MESSAGE_ID as "messageid",
+                    msg.MESSAGE_TYPE as "type",
+                    msg.MESSAGE_COVER as "cover",
+                    msg.MESSAGE_TITLE as "title",
+                    msg.MESSAGE_CONTENT as "content",
+                    msg.status as "status",
+                    TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+                FROM OA_MESSAGE_NOTICES msg
+                WHERE status = '0'
+                AND MESSAGE_TYPE = 1
+                ORDER BY msg.CREATE_TIME DESC
+                )
+                WHERE ROWNUM &lt;= 1
+        )
+        LEFT JOIN(
+            SELECT count(0) as "count"
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 1
+        )
+        on 1=1
+        union all
+        SELECT *
+        FROM(
+            SELECT *
+            FROM(
+                SELECT
+                    msg.id as "id",
+                    msg.MESSAGE_ID as "messageid",
+                    msg.MESSAGE_TYPE as "type",
+                    msg.MESSAGE_COVER as "cover",
+                    msg.MESSAGE_TITLE as "title",
+                    msg.MESSAGE_CONTENT as "content",
+                    msg.status as "status",
+                    TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+                FROM OA_MESSAGE_NOTICES msg
+                WHERE status = '0'
+                AND MESSAGE_TYPE = 2
+                ORDER BY msg.CREATE_TIME DESC
+            ) WHERE ROWNUM &lt;= 1
+        )
+        LEFT JOIN(
+            SELECT count(0) as "count"
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 2
+        )
+        on 1= 1
+        union all
+        SELECT *
+        FROM(
+            SELECT *
+            FROM(
+                SELECT
+                    msg.id as "id",
+                    msg.MESSAGE_ID as "messageid",
+                    msg.MESSAGE_TYPE as "type",
+                    msg.MESSAGE_COVER as "cover",
+                    msg.MESSAGE_TITLE as "title",
+                    msg.MESSAGE_CONTENT as "content",
+                    msg.status as "status",
+                    TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+                FROM OA_MESSAGE_NOTICES msg
+                WHERE status = '0'
+                AND MESSAGE_TYPE = 3
+                ORDER BY msg.CREATE_TIME DESC
+            ) WHERE ROWNUM &lt;= 1
+        )
+        LEFT JOIN(
+            SELECT count(0) as "count"
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 3
+        )
+        on 1= 1
+       union all
+        SELECT *
+        FROM(
+            SELECT *
+            FROM(
+                SELECT
+                    msg.id as "id",
+                    msg.MESSAGE_ID as "messageid",
+                    msg.MESSAGE_TYPE as "type",
+                    msg.MESSAGE_COVER as "cover",
+                    msg.MESSAGE_TITLE as "title",
+                    msg.MESSAGE_CONTENT as "content",
+                    msg.status as "status",
+                    TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+                FROM OA_MESSAGE_NOTICES msg
+                WHERE status = '0'
+                AND MESSAGE_TYPE = 4
+                ORDER BY msg.CREATE_TIME DESC
+            ) WHERE ROWNUM &lt;= 1
+        )
+        LEFT JOIN(
+            SELECT count(0) as "count"
+            FROM OA_MESSAGE_NOTICES  msg
+            WHERE status='0'
+            AND  MESSAGE_TYPE = 4
+        )
+        on 1= 1
+
+    </select>
+
+    <select id="latestNewsByType" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT *
+        FROM(
+            SELECT
+            msg.id as "id",
+            msg.MESSAGE_ID as "messageid",
+            msg.MESSAGE_TYPE as "type",
+            msg.MESSAGE_COVER as "cover",
+            msg.MESSAGE_TITLE as "title",
+            msg.MESSAGE_CONTENT as "content",
+            msg.status as "status",
+            TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+            FROM OA_MESSAGE_NOTICES msg
+            WHERE status = '0'
+            AND MESSAGE_TYPE = 1
+            ORDER BY msg.CREATE_TIME DESC
+        )
+        WHERE  ROWNUM &lt;= 1
+
+        union all
+
+        SELECT *
+        FROM(
+            SELECT
+            msg.id as "id",
+            msg.MESSAGE_ID as "messageid",
+            msg.MESSAGE_TYPE as "type",
+            msg.MESSAGE_COVER as "cover",
+            msg.MESSAGE_TITLE as "title",
+            msg.MESSAGE_CONTENT as "content",
+            msg.status as "status",
+            TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+            FROM OA_MESSAGE_NOTICES msg
+            WHERE status = '0'
+            AND MESSAGE_TYPE = 2
+            ORDER BY msg.CREATE_TIME DESC
+        )
+        WHERE  ROWNUM &lt;= 1
+         union all
+
+        SELECT *
+        FROM(
+            SELECT
+            msg.id as "id",
+            msg.MESSAGE_ID as "messageid",
+            msg.MESSAGE_TYPE as "type",
+            msg.MESSAGE_COVER as "cover",
+            msg.MESSAGE_TITLE as "title",
+            msg.MESSAGE_CONTENT as "content",
+            msg.status as "status",
+            TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+            FROM OA_MESSAGE_NOTICES msg
+            WHERE status = '0'
+            AND MESSAGE_TYPE = 3
+            ORDER BY msg.CREATE_TIME DESC
+        )
+        WHERE  ROWNUM &lt;= 1
+           union all
+
+        SELECT *
+        FROM(
+            SELECT
+            msg.id as "id",
+            msg.MESSAGE_ID as "messageid",
+            msg.MESSAGE_TYPE as "type",
+            msg.MESSAGE_COVER as "cover",
+            msg.MESSAGE_TITLE as "title",
+            msg.MESSAGE_CONTENT as "content",
+            msg.status as "status",
+            TO_CHAR(msg.CREATE_TIME,'yyyy-mm-dd hh24:mi:ss')  as "time"
+            FROM OA_MESSAGE_NOTICES msg
+            WHERE status = '0'
+            AND MESSAGE_TYPE = 4
+            ORDER BY msg.CREATE_TIME DESC
+        )
+        WHERE  ROWNUM &lt;= 1
+
+    </select>
+
+    <insert id="insert" parameterType="com.alibaba.fastjson.JSONObject">
+
+        INSERT INTO OA_MESSAGE_NOTICES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="messageid  != null">
+                MESSAGE_ID ,
+            </if>
+            <if test="type != null">
+                MESSAGE_TYPE,
+            </if>
+            <if test="cover != null">
+                MESSAGE_COVER,
+            </if>
+            <if test="title  != null">
+                MESSAGE_TITLE ,
+            </if>
+            <if test="content != null">
+                MESSAGE_CONTENT,
+            </if>
+            <if test="time != null">
+                CREATE_TIME,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="messageid != null">
+                #{MESSAGE_ID,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{MESSAGE_TYPE,jdbcType=INTEGER},
+            </if>
+
+            <if test="cover != null">
+                #{MESSAGE_COVER,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{MESSAGE_TITLE,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                #{MESSAGE_CONTENT,jdbcType=VARCHAR},
+            </if>
+
+            <if test="time != null">
+                #{CREATE_TIME,jdbcType=DATE},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+        </trim>
+
+    </insert>
+
+    <update id="updateById" parameterType="com.alibaba.fastjson.JSONObject">
+        UPDATE OA_MESSAGE_NOTICES
+        SET
+            status = #{status}
+        WHERE
+        id = #{id}
+    </update>
+
+    <update id="updateByType" parameterType="com.alibaba.fastjson.JSONObject">
+        UPDATE OA_MESSAGE_NOTICES
+        SET
+            status = '1'
+        WHERE
+        MESSAGE_TYPE = #{type}
+    </update>
+
+    <update id="removeById" parameterType="java.lang.String">
+        update
+        OA_MESSAGE_NOTICES
+        set status = '2'
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="java.lang.String">
+        delete
+        from  OA_MESSAGE_NOTICES
+        where
+        id = #{id}
+    </delete>
+
+
+
+
+
+</mapper>

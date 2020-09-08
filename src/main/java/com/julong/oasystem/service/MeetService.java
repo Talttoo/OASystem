@@ -13,6 +13,8 @@ public interface MeetService {
 
     JSONObject update(JSONObject jsonObject);
 
+    JSONObject finish(JSONObject jsonObject);
+
     int insertSelective(JSONObject jsonObject, String[] userIds);
 
     int updateByPrimaryKeySelective(JSONObject jsonObject,String[] userIds);

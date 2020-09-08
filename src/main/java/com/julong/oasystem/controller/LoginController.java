@@ -25,8 +25,8 @@ public class LoginController {
 	 */
 	@PostMapping("/auth")
 	public JSONObject authLogin(@RequestBody JSONObject requestJson) {
-		System.out.println("登录ing..........");
-		System.out.println("requestJson:"+requestJson.toJSONString());
+		//System.out.println("登录ing..........");
+		//System.out.println("requestJson:"+requestJson.toJSONString());
 		JsonResultUtil.hasAllRequired(requestJson, "username,password");
 		return loginService.authLogin(requestJson);
 	}

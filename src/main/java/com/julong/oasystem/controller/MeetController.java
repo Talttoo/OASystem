@@ -107,6 +107,19 @@ public class MeetController {
         return meetService.update(requestJson);
     }
 
+
+    /**
+     * 更新会议数据
+     * @param requestJson
+     * @return
+     */
+    @PutMapping("/finish")
+    public JSONObject finish(@RequestBody JSONObject requestJson) {
+
+        return meetService.finish(requestJson);
+
+    }
+
     /**
      * 删除会议
      * @param request

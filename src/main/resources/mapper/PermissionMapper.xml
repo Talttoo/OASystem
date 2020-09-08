@@ -6,6 +6,7 @@
     <resultMap id="permissionMap" type="com.julong.oasystem.utils.model.One2Many">
         <id column="userId" property="userId"/>
         <result column="nickname" property="nickname"/>
+        <result column="username" property="username"/>
         <result column="roleId" property="roleId"/>
         <result column="roleName" property="roleName"/>
         <collection property="menuList" ofType="String">
@@ -18,6 +19,7 @@
     <select id="getUserPermission" resultMap="permissionMap">
         SELECT
             u.id               as  "userId",
+            u.username         as  "username",
             u.nickname         as  "nickname",
             u.role_id          as  "roleId",
             r.role_name        as  "roleName",

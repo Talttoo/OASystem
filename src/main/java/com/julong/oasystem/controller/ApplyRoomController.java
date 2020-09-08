@@ -34,23 +34,21 @@ public class ApplyRoomController {
         //return applyRoomService.insert(requestJson);
         //判断房间使用状况
 
-
+        System.out.println("requestJson: "+requestJson.toJSONString());
         JSONObject meetingRoom = meetingRoomService.selectByRoomName(requestJson);
+
         System.out.println("meetingRoom:"+meetingRoom.toJSONString());
         Integer status = Integer.valueOf(meetingRoom.getString("status"));
-        if (status == CsEnum.meetRoom.MEET_ROOM_STATUS_FREE.getValue())
-        {
+        if (status == CsEnum.meetRoom.MEET_ROOM_STATUS_FREE.getValue()){
             //插入预约申请表
-            applyRoomService.insert(requestJson);
+          int res =  applyRoomService.insert(requestJson);
             //更新会议室的状态
-           return meetingRoomService.booking(Long.valueOf(requestJson.getString("id")));
-
-//            Integer code = Integer.valueOf(jsonObject.getString("code"));
-//            System.out.println("code:"+code);
-//            if(code == Constants.SUCCESS_CODE){
-//                 meetingRoomService.booking(Long.valueOf(requestJson.getString("id")));
-//            }
-//            return  JsonResultUtil.successJson();
+            System.out.println("res:"+res);
+           if(res>0){
+               return meetingRoomService.booking(Long.valueOf(requestJson.getString("id")));
+            }else {
+                return JsonResultUtil.errorJson(401,"插入数据异常");
+            }
         }
         else if (status == CsEnum.meetRoom.MEET_ROOM_STATUS_APPLYING.getValue())
         {
@@ -75,6 +73,12 @@ public class ApplyRoomController {
     @PutMapping
     public JSONObject update(@RequestBody JSONObject requestJson) {
         return applyRoomService.update(requestJson);
+    }
+
+    @PutMapping("/approve")
+    public JSONObject approve(@RequestBody JSONObject requestJson){
+        System.out.println("approve:"+requestJson.toJSONString());
+        return applyRoomService.approve(requestJson);
     }
 
     /**

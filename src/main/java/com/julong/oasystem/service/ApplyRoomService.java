@@ -11,9 +11,11 @@ public interface ApplyRoomService {
 
     JSONObject update(JSONObject jsonObject);
 
-    JSONObject insert(JSONObject jsonObject);
+    int insert(JSONObject jsonObject);
 
     JSONObject list(JSONObject jsonObject);
+
+    JSONObject approve(JSONObject jsonObject);
 
     JSONObject delete(Long id);
 

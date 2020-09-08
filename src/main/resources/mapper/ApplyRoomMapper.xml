@@ -151,14 +151,13 @@
         where id = #{id,jdbcType=VARCHAR}
     </update>
 
-    <update id="agree" parameterType="com.alibaba.fastjson.JSONObject">
+    <update id="approve" parameterType="com.alibaba.fastjson.JSONObject">
         UPDATE OA_APPLYROOM
         SET
-            remark=#{remark},
             reply=#{reply},
             status=#{status}
         WHERE
-        id = #{id};
+        id = #{id}
     </update>
 
 

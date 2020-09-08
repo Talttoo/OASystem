@@ -75,7 +75,8 @@ public class PaperController {
 
         //使用分页插件,核心代码就这一行，页数、每页行数
         Page<PaperVO> page = PageHelper.startPage(pageNum, pageRow);
-        List<PaperVO> list = paperService.queryPaperByUserID(JsonResultUtil.getUserid());
+        List<PaperVO> list = paperService.queryPaper();
+        //List<PaperVO> list = paperService.queryPaperByUserID(JsonResultUtil.getUserid());
 
         System.out.println("list:"+list.toString());
         ArrayList<PaperQueryView> queryViewlist = new ArrayList<PaperQueryView>();

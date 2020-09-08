@@ -12,6 +12,8 @@ public interface ApplyRoomDao {
 
     List<JSONObject> listByPage(JSONObject jsonObject);
 
+    int approve(JSONObject jsonObject);
+
     int delete(Long id);
 
     int count(JSONObject jsonObject);

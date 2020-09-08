@@ -152,10 +152,10 @@
             oa_checkitem item,
             oa_user uer
         WHERE
-            obj.delete_status = 0
+        obj.CHECKER =  #{id}
+        AND obj.delete_status = 0
         AND obj.ITEM_CODE = item. ID
-        AND obj.CHECKER = uer. ID
-	    AND obj.CHECKER =  #{id}
+        AND obj.CHECKER = uer.ID
         ORDER BY obj.id
     </select>
 

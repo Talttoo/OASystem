@@ -70,9 +70,13 @@ public class SecurityCheckController {
      * @param request
      * @return
      */
-    @GetMapping("getListByUser")
+    @GetMapping("/getListByUser")
     public JSONObject selectList(HttpServletRequest request) {
         JSONObject jsonObject= JsonResultUtil.request2Json(request);
-        return securityCheckService.listByUser(jsonObject);
+        System.out.println("jsonObject: "+jsonObject.toJSONString());
+        JSONObject object = securityCheckService.listByUser(jsonObject);
+        //return securityCheckService.listByUser(jsonObject);
+        System.out.println("我的检查: "+object.toJSONString());
+        return object;
     }
 }

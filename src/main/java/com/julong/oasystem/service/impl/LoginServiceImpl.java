@@ -16,6 +16,8 @@ import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,8 @@ import java.util.Date;
  */
 @Service
 public class LoginServiceImpl implements LoginService {
+
+	private Logger logger = LoggerFactory.getLogger(LoginServiceImpl.class);
 
 	@Autowired
 	private LoginDao loginDao;
@@ -88,6 +92,7 @@ public class LoginServiceImpl implements LoginService {
 		JSONObject userPermission = permissionService.getUserPermission(username);
 		session.setAttribute(Constants.SESSION_USER_PERMISSION, userPermission);
 		info.put("userPermission", userPermission);
+		logger.info("++++获取getInfo:"+info.toJSONString());
 		return JsonResultUtil.successJson(info);
 	}
 

@@ -90,6 +90,20 @@
         id = #{id}
     </update>
 
+    <update id="usingRoom" parameterType="java.lang.String">
+        update
+        OA_MEETINGROOM set status=2
+        where
+        meetRoomName = #{roomName}
+    </update>
+
+    <update id="finish" parameterType="java.lang.String">
+        update
+        OA_MEETINGROOM set status=1
+        where
+        meetRoomName = #{roomName}
+    </update>
+
     <update id="delete" parameterType="java.lang.Long">
         update
         OA_MEETINGROOM set status=0
@@ -120,7 +134,7 @@
         obj.status as "status"
     FROM
     oa_meetingroom obj
-    WHERE obj.id = #{meet_RoomId}
+    WHERE obj.meetRoomName = #{roomName}
   </select>
 
 

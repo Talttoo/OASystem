@@ -12,6 +12,7 @@ import com.julong.oasystem.service.MeetService;
 import com.julong.oasystem.utils.JsonResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,19 @@ public class MeetServiceImpl implements MeetService {
         int res = meetDao.update(jsonObject);
         if(res>0){
             return JsonResultUtil.successJson();
+        }else {
+            return JsonResultUtil.errorJson(401,"更新数据异常");
+        }
+    }
+
+    @Transactional
+    @Override
+    public JSONObject finish(JSONObject jsonObject) {
+        int res = meetDao.update(jsonObject);
+        if(res>0){
+           meetingRoomDao.finish(jsonObject.getString("roomName"));
+           return JsonResultUtil.successJson();
+
         }else {
             return JsonResultUtil.errorJson(401,"更新数据异常");
         }
